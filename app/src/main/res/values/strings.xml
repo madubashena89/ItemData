@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ItemData</string>
+    <string name="app_login">Log In</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="login_forgetPw">Forgot Password?</string>
+</resources>
