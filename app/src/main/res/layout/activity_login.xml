@@ -20,6 +20,7 @@
             android:padding="@dimen/login_padding20">
 
             <ImageView
+                android:id="@+id/logIn_Img"
                 android:layout_width="@dimen/margin100"
                 android:layout_height="@dimen/margin100"
                 android:layout_gravity="center_horizontal"
@@ -32,6 +33,7 @@
                 android:orientation="vertical">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email_id"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/email_hint"
@@ -46,6 +48,7 @@
                 app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password_id"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/password_hint"
@@ -60,6 +63,7 @@
                 android:layout_marginTop="@dimen/margin10"/>
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/login_btn"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/button_height"
                 android:text="@string/app_login"
