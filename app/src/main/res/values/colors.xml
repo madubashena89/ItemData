@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
-    <color name="button_colour">#161616</color>
+    <color name="colorPrimary">#FF4E9CE9</color>
+    <color name="colorPrimaryDark">#FF1D2FA5</color>
+    <color name="colorAccent">#E03574</color>
+    <color name="button_colour">#FF1D2FA5</color>
     <color name="black">#FF161616</color>
+    <color name="devider_color">#FFE03574</color>
 </resources>
