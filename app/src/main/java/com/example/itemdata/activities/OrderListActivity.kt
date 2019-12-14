@@ -1,9 +1,11 @@
-package com.example.itemdata.Activities
+package com.example.itemdata.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.itemdata.Adaptors.OrderListAdapter
+import com.example.itemdata.Interfaces.ListItemCallback
+import com.example.itemdata.adaptors.OrderListAdapter
 import com.example.itemdata.R
 import com.example.itemdata.model.OrderListData
 import com.example.itemdata.model.OrderStatusEnum
@@ -14,6 +16,7 @@ class OrderListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_order_list)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         createDummyList()
         getList()
     }
@@ -34,9 +37,22 @@ class OrderListActivity : AppCompatActivity() {
     }
 
     private fun getList() {
-        val mAdapter = OrderListAdapter(mList)
+        val mAdapter = OrderListAdapter(mList, object : ListItemCallback{
+            override fun orderStatusUpdate(updatedData: OrderListData) {
+                super.orderStatusUpdate(updatedData)
+            }
+        })
         orderListRecyclerView.layoutManager = LinearLayoutManager(applicationContext)
         orderListRecyclerView.adapter = mAdapter
     }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        if(item!!.itemId == android.R.id.home){
+            finish()
+            return true
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
 
 }

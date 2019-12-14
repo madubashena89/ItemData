@@ -4,5 +4,5 @@ data class OrderListData(val orderID : String,
                          val address : String,
                          val number : String ,
                          val modeOfpayment : String,
-                         val orderStatus : OrderStatusEnum) {
+                         var orderStatus : OrderStatusEnum) {
 }

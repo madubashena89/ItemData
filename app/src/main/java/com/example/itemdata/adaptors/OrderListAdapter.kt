@@ -1,4 +1,4 @@
-package com.example.itemdata.Adaptors
+package com.example.itemdata.adaptors
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,18 +6,13 @@ import android.view.ViewGroup
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
-import androidx.core.view.get
 import androidx.recyclerview.widget.RecyclerView
-import com.example.itemdata.Adaptors.OrderListAdapter.*
+import com.example.itemdata.Interfaces.ListItemCallback
 import com.example.itemdata.R
 import com.example.itemdata.model.OrderListData
 import com.example.itemdata.model.OrderStatusEnum
-import com.google.android.material.chip.Chip
-import com.google.android.material.chip.ChipGroup
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import org.w3c.dom.Text
 
-class OrderListAdapter(val mList: List<OrderListData>): RecyclerView.Adapter<OrderListAdapter.ViewHolder>(){
+class OrderListAdapter(val mList: List<OrderListData>, val listItemCallback : ListItemCallback): RecyclerView.Adapter<OrderListAdapter.ViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.order_list_row,parent,false)
         return ViewHolder(v)
@@ -35,14 +30,21 @@ class OrderListAdapter(val mList: List<OrderListData>): RecyclerView.Adapter<Ord
         holder.tvPaymentMode.text = data.modeOfpayment
 
         when(data.orderStatus){
-//            OrderStatusEnum.Cancelled -> holder.rg[0]
-//            OrderStatusEnum.Pending -> holder.rg[1]
-//            OrderStatusEnum.Delivered -> holder.rg[2]
+            OrderStatusEnum.Cancelled -> holder.rg.verticalScrollbarPosition = 0
+            OrderStatusEnum.Pending -> holder.rg.verticalScrollbarPosition = 1
+            OrderStatusEnum.Delivered -> holder.rg.verticalScrollbarPosition = 2
 
-            OrderStatusEnum.Cancelled -> holder.rgCancel
-            OrderStatusEnum.Pending -> holder.rgPending
-            OrderStatusEnum.Delivered -> holder.rgDeliverd
+//            OrderStatusEnum.Cancelled -> holder.rgCancel
+//            OrderStatusEnum.Pending -> holder.rgPending
+//            OrderStatusEnum.Delivered -> holder.rgDeliverd
         }
+
+//        holder.rg.setOnClickListener{
+//            when(position){
+//                0 --> data.orderStatus.Cancelled
+//            }
+//            listItemCallback.onOr
+//        }
     }
 
 
