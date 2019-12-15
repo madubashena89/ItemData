@@ -1,14 +1,14 @@
-package com.example.itemdata.activities
+package com.itemdatashow.itemdata.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.itemdata.Interfaces.ListItemCallback
-import com.example.itemdata.adaptors.OrderListAdapter
-import com.example.itemdata.R
-import com.example.itemdata.model.OrderListData
-import com.example.itemdata.model.OrderStatusEnum
+import com.itemdatashow.itemdata.Interfaces.ListItemCallback
+import com.itemdatashow.itemdata.adaptors.OrderListAdapter
+import com.itemdatashow.itemdata.R
+import com.itemdatashow.itemdata.model.OrderListData
+import com.itemdatashow.itemdata.model.OrderStatusEnum
 import kotlinx.android.synthetic.main.activity_order_list.*
 
 class OrderListActivity : AppCompatActivity() {

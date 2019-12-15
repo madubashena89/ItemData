@@ -1,4 +1,4 @@
-package com.example.itemdata.model
+package com.itemdatashow.itemdata.model
 
 enum class OrderStatusEnum { Cancelled, Pending, Delivered
 }

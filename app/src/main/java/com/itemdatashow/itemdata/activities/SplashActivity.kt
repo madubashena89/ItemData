@@ -1,4 +1,4 @@
-package com.example.itemdata.activities
+package com.itemdatashow.itemdata.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.util.Log
 import android.view.WindowManager
-import com.example.itemdata.R
+import com.itemdatashow.itemdata.R
 
 class SplashActivity : AppCompatActivity() {
 

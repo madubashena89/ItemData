@@ -1,4 +1,4 @@
-package com.example.itemdata.model
+package com.itemdatashow.itemdata.model
 
 data class OrderListData(val orderID : String,
                          val address : String,

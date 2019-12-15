@@ -1,4 +1,4 @@
-package com.example.itemdata.adaptors
+package com.itemdatashow.itemdata.adaptors
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,10 +7,10 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.itemdata.Interfaces.ListItemCallback
-import com.example.itemdata.R
-import com.example.itemdata.model.OrderListData
-import com.example.itemdata.model.OrderStatusEnum
+import com.itemdatashow.itemdata.Interfaces.ListItemCallback
+import com.itemdatashow.itemdata.R
+import com.itemdatashow.itemdata.model.OrderListData
+import com.itemdatashow.itemdata.model.OrderStatusEnum
 
 class OrderListAdapter(val mList: List<OrderListData>, val listItemCallback : ListItemCallback): RecyclerView.Adapter<OrderListAdapter.ViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

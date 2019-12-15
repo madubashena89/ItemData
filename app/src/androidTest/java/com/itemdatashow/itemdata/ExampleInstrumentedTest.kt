@@ -1,4 +1,4 @@
-package com.example.itemdata
+package com.itemdatashow.itemdata
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
