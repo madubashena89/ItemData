@@ -11,6 +11,9 @@
     android:elevation="@dimen/margin10">
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:clickable="true"
+        android:focusable="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:contentPadding="@dimen/margin10"
@@ -77,11 +80,6 @@
                       android:textSize="@dimen/margin12"/>
               </RadioGroup>
 
-
-
-
-
-
           </LinearLayout>
 
           <LinearLayout
@@ -106,11 +104,6 @@
                   android:text="ABCD"
                   android:textColor="@color/colorPrimary">
               </TextView>
-
-
-
-
-
 
           </LinearLayout>
 
@@ -137,11 +130,6 @@
                   android:textColor="@color/colorPrimary">
               </TextView>
 
-
-
-
-
-
           </LinearLayout>
 
           <LinearLayout
@@ -166,17 +154,9 @@
                   android:textColor="@color/colorPrimary">
               </TextView>
 
-
-
-
-
-
           </LinearLayout>
 
-
-
       </LinearLayout>
-
 
     </com.google.android.material.card.MaterialCardView>
 

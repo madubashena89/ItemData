@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.itemdatashow.itemdata">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,15 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activities.OrderDetailsActivity"></activity>
         <activity
-            android:name="com.itemdatashow.itemdata.activities.OrderListActivity"
-            android:label = "Order Report List"/>
+            android:name=".activities.OrderListActivity"
+            android:label="Order Report List" />
         <activity
-            android:name="com.itemdatashow.itemdata.activities.LoginActivity"
+            android:name=".activities.LoginActivity"
             android:label="@string/app_login"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.itemdatashow.itemdata.activities.SplashActivity"
+            android:name=".activities.SplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
