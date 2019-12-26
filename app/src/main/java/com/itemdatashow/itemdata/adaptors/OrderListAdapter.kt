@@ -58,12 +58,20 @@ class OrderListAdapter(val mContext : Context, val mList: List<OrderListData>, v
 ////            OrderStatusEnum.Delivered -> holder.rgDeliverd
         }
 
-        holder.rg.setOnClickListener { position ->
+        holder.rg.setOnClickListener {
+
+            when (data.orderStatus) {
+                OrderStatusEnum.Cancelled -> holder.rg.verticalScrollbarPosition = 0
+                OrderStatusEnum.Pending -> holder.rg.verticalScrollbarPosition = 1
+                OrderStatusEnum.Delivered -> holder.rg.verticalScrollbarPosition = 2
+            }
+
+            /*position ->
             when (position) {
                 0 -> data.orderStatus = OrderStatusEnum.Cancelled
                 1 -> data.orderStatus = OrderStatusEnum.Pending
                 2 -> data.orderStatus = OrderStatusEnum.Delivered
-            }
+            }*/
             listItemCallback.orderStatusUpdate(data, holder.adapterPosition)
         }
 
@@ -112,5 +120,6 @@ class OrderListAdapter(val mContext : Context, val mList: List<OrderListData>, v
 //        }
 //
 //    }
-    }}
+    }
+}
 

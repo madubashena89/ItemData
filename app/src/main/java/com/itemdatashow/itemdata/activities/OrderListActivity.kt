@@ -25,21 +25,23 @@ class OrderListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_order_list)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-        //createDummyList()
-        //showData()
-        ItemsApi().getItems().enqueue(object : Callback<List<OrderListData>>{
-            override fun onFailure(call: Call<List<OrderListData>>, t: Throwable) {
-                Toast.makeText(applicationContext, t.message, Toast.LENGTH_LONG).show()
-            }
+        createDummyList()
+        getList(mList)
 
-            override fun onResponse(call: Call<List<OrderListData>>, response: Response<List<OrderListData>>) {
-               val items = response.body()
-                items?.let {
-                    getList(it)
-                }
-            }
-
-        })
+        //====API call with Retrofit======
+//        ItemsApi().getItems().enqueue(object : Callback<List<OrderListData>>{
+//            override fun onFailure(call: Call<List<OrderListData>>, t: Throwable) {
+//                Toast.makeText(applicationContext, t.message, Toast.LENGTH_LONG).show()
+//            }
+//
+//            override fun onResponse(call: Call<List<OrderListData>>, response: Response<List<OrderListData>>) {
+//               val items = response.body()
+//                items?.let {
+//                    getList(it)
+//                }
+//            }
+//
+//        })
 
 
     }
